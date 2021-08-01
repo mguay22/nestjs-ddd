@@ -1,9 +1,3 @@
-import { IdentifiableEntitySchema } from './identifiable-entity.schema';
-
-export interface EntityFactory<
-  TEntity,
-  TSchema extends IdentifiableEntitySchema
-> {
-  createFromSchema(entitySchema: TSchema): TEntity;
+export interface EntityFactory<TEntity> {
   create(...args: any): TEntity | Promise<TEntity>;
 }
