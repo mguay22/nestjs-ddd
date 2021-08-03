@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { CampersController } from './campers/campers.controller';
+import { CampersModule } from './campers/campers.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [],
-  controllers: [CampersController],
+  imports: [CampersModule, DatabaseModule],
+  controllers: [],
   providers: [],
 })
 export class AppModule {}
